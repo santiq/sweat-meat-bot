@@ -34,5 +34,13 @@ const spam = () => {
   }).catch(e => console.log('Something terrible happend: ', e));
 }
 
-
+// Initialize bot
 setInterval(spam, 15 * 60 * 1000);
+
+// This is only for keep the server running on Heroku
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+const server = app.listen(port,() => {
+  console.log("Server Up");
+})

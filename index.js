@@ -10,7 +10,6 @@ const client = new Twitter({
 
 const effects = ["minefield", "halfgravity", "chainsaw", "beartrap"];
 const SweetMeetAccount = 'SweetMeatRunner'
-const interval = 15;
 
 const sample = arr => arr[Math.floor(Math.random() * arr.length)];
 
@@ -35,7 +34,7 @@ const spam = () => {
 }
 
 // Initialize bot
-setInterval(spam, 15 * 60 * 1000);
+setInterval(spam, (process.env.INTERVAL_MINUTES || 60) * 60 * 1000);
 
 // This is only for keep the server running on Heroku
 const express = require('express');

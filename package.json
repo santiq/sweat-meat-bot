@@ -1,6 +1,9 @@
 {
   "name": "sweet-meat-bot",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=6.9.1"
+  },
   "description": "A simple bot for Sweet Meat game",
   "main": "index.js",
   "scripts": {
@@ -9,8 +12,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "express": "^4.14.0",
     "twitter": "^1.4.0"
   }
 }
